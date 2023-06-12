@@ -18,7 +18,7 @@ const gallery = document.querySelector('.gallery')
 const markupEl = images.map(image => {
   const listEl = document.createElement('li')
   listEl.classList.add('item')
-listEl.insertAdjacentHTML('beforeend',`<img src = "${image.url}", alt = "${image.alt}" class = 'animals'/>`)
+listEl.insertAdjacentHTML('afterbegin',`<img src ="${image.url}",alt = "${image.alt}", class = 'animals'/>`)
 
 
   console.log(listEl);

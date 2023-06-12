@@ -25,6 +25,8 @@ button {
 
 .animals{
   width: 100%;
+  height: 283px;
+  display: block;
 }
 .gallery{
   list-style: none;
