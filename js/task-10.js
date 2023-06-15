@@ -18,7 +18,6 @@ btnDestroyEl.addEventListener('click',destroyBoxes)
 
 function createBoxes(event) {
   const itemsEl = document.createElement('div')
-
   console.log(itemsEl);
   
   boxesEl.append(itemsEl)
