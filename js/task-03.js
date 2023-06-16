@@ -13,17 +13,31 @@ const images = [
   },
 ];
 
+
 const gallery = document.querySelector('.gallery')
 
-const markupEl = images.map(image => {
-  const listEl = document.createElement('li')
-  listEl.classList.add('item')
-listEl.insertAdjacentHTML('afterbegin',`<img src ="${image.url}",alt = "${image.alt}", class = 'animals'/>`)
+const markupEl = images.map(image =>
+  `<li class = 'item'> 
+  <img src ="${image.url}",alt = "${image.alt}", class = 'animals',/>
+  </li>`
+).join('')
+
+gallery.insertAdjacentHTML('beforeend', markupEl)
 
 
-  console.log(listEl);
-  return listEl
-})
+// gallery.append(...markupEl)
 
-gallery.append(...markupEl)
+// const gallery = document.querySelector('.gallery')
+
+// const markupEl = images.map(image => {
+//   const listEl = document.createElement('li')
+//   listEl.classList.add('item')
+// listEl.insertAdjacentHTML('afterbegin',`<img src ="${image.url}",alt = "${image.alt}", class = 'animals',/>`)
+
+
+//   console.log(listEl);
+//   return listEl
+// })
+
+// gallery.append(...markupEl)
 

@@ -1,5 +1,5 @@
 const formEl = document.querySelector('form.login-form')
-console.log(formEl);
+
 formEl.addEventListener('submit', onSubmit)
 
 function onSubmit(event) {
@@ -15,11 +15,11 @@ function onSubmit(event) {
         password: password.value
     }
 
-    if (!email.value || !password.value) {
+    if (!email.value.trim() || !password.value) {
         alert("Хей! Не всі поля заповнені")
     }
     else {
         console.log(data)
-        formEl.reset()
+        event.currentTarget.reset()
     }
 }
